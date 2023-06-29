@@ -1,0 +1,9 @@
+<p>student works!</p>
+
+<ul>
+    <li *ngFor="let student of students">
+      <span [ngStyle]="{ color: student.nombre ? 'green' : 'red' }">{{ student.nombre }}</span>
+      <span [ngClass]="{ 'highlight': student.edad > 18 }">{{ student.edad }}</span>
+      <span>{{ student.apellido }}</span>
+    </li>
+  </ul>
