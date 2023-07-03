@@ -1,23 +1,20 @@
 import { Component } from '@angular/core';
-/*interface iStudent {
+
+interface iStudent {
   nombre: string,
   apellido: string,
   edad: number,
  }
-*/
- class Student {
-  public nombre = '';
-  public apellido = '';
-  public edad = 12
- 
-  constructor(nombre: string, apellido: string, edad: number) {
-    this.nombre = nombre; 
-    this.apellido = apellido; 
-    this.edad = edad; 
+
+class Student implements iStudent {
+  constructor(
+    public nombre: string,
+    public apellido: string,
+    public edad: number,
+  ) {
+    
   }
 }
-
-
 
 @Component({
   selector: 'app-student',
@@ -39,3 +36,16 @@ export class StudentComponent {
 
 
 
+ /*
+ class Student implements iStudent {
+  public nombre = '';
+  public apellido = '';
+  public edad = 12
+ 
+  constructor(nombre: string, apellido: string, edad: number) {
+    this.nombre = nombre; 
+    this.apellido = apellido; 
+    this.edad = edad; 
+  }
+}
+*/
