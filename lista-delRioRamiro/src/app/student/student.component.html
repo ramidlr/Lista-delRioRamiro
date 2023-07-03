@@ -1,5 +1,5 @@
 <h1>Lista de Alumnos x Ramiro del Rio</h1>
-
+<p>Uso de Directivas y Pipes</p>
 
 <ol>
     <li class="bordered-li" *ngFor="let student of students">
@@ -10,3 +10,8 @@
       <span *ngIf="student.fechanacimiento !== null && student.fechanacimiento !== undefined">Cumpleanos: {{ student.fechanacimiento | date: 'dd/MM/yyyy'}}</span>
     </li>
 </ol>
+ 
+<!-- 
+APLIQUE TODAS LAS DIRECTIVAS INDICADAS. EL NGIF PODIA HACERLO MAS CORTO SOLO CON LA CONDICION DE STUDENT.FECHANACIMIENTO
+SIN ACLARAR EL TIPO DE DATO A EVALUAR COMO SER NULL O UNDEFINED. PERO QUERIA VALIDAR ESTO TAMBIEN.
+-->
