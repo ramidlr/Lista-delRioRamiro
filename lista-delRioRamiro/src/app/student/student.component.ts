@@ -23,8 +23,13 @@ class Student implements iStudent {
 })
 export class StudentComponent {
 
-  students: Array<Student> = [new Student('Ramiro', 'del Rio', 32), new Student('Pedro', 'Sanchez', 78), new Student('Christian', 'Steib', 31)];  
-
+  students: Array<Student> = [
+    new Student('Ramiro', 'del Rio', 32), 
+    new Student('Pedro', 'Sanchez', 78), 
+    new Student('Carlos', 'Rivera', 11),
+    new Student('Juan', 'Sierra', 22),
+    new Student('Maximiliano', 'Perez', 33),
+];  
 }
 
 

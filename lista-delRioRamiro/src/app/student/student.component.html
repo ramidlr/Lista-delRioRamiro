@@ -2,22 +2,15 @@
 
 <ul>
     <li *ngFor="let student of students">
-      <span [ngStyle]="{ color: student.nombre ? 'green' : 'red' }">{{ student.nombre }}</span>
-      <span [ngClass]="{ 'highlight': student.edad > 18 }">{{ student.edad }}</span>
-      <span>{{ student.apellido }}</span>
+      <span [ngStyle]="{ color: student.nombre === 'Ramiro' ? 'green' : 'red' }">Nombre: {{ student.nombre }}</span><br>
+      <span>Apellido: {{ student.apellido | lowercase}}</span><br>
+      <span [ngClass]="{ 'highlight': student.edad > 18 }">Edad: {{ student.edad }}</span><br>
     </li>
   </ul>
 
 
-  <ul>
-    <li *ngFor="let student of students">
-      <span [ngStyle]="{ color: student.nombre ? 'green' : 'red' }">{{ student.nombre }}</span>
-      <span [ngClass]="{ 'highlight': student.edad > 18 }">{{ student.edad }}</span>
-      <span>{{ student.apellido }}</span>
-    </li>
-  </ul>
 
-  
+
  <!-- 
 REFERENCIA DE CLASE DIRECTIVAS.
   <ul>
