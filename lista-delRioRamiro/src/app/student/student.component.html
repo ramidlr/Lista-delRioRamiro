@@ -1,32 +1,12 @@
-<h1>Lista de Alumnos - Ramiro del Rio</h1>
+<h1>Lista de Alumnos x Ramiro del Rio</h1>
 
-<ul>
-    <li *ngFor="let student of students">
-      <span [ngStyle]="{ color: student.nombre === 'Ramiro' ? 'green' : 'red' }">Nombre: {{ student.nombre }}</span><br>
-      <span>Apellido: {{ student.apellido | lowercase}}</span><br>
+
+<ol>
+    <li class="bordered-li" *ngFor="let student of students">
+      <span class="nombre" [ngStyle]="{ color: student.nombre === 'Ramiro' ? 'teal' : 'yellow' }">Nombre: {{ student.nombre }}</span><br>
+      <span>Apellido: {{ student.apellido | uppercase}}</span><br>
       <span [ngClass]="{ 'highlight': student.edad > 18 }">Edad: {{ student.edad }}</span><br>
+      <span [ngClass]="{ 'alert': student.cuotapendiente > 10000}">Cuota a Pagar: {{ student.cuotapendiente | currency: 'USD'}}</span><br>
+      <span *ngIf="student.fechanacimiento !== null && student.fechanacimiento !== undefined">Cumpleanos: {{ student.fechanacimiento | date: 'dd/MM/yyyy'}}</span>
     </li>
-  </ul>
-
-
-
-
- <!-- 
-REFERENCIA DE CLASE DIRECTIVAS.
-  <ul>
-    <li *ngFor="let alumno of ['Naruto', 'Sasuke', 'Sakura']; let i = index">
-      <span
-        [style.background-color]="'red'"
-        *ngIf="alumno === 'Sasuke'; else notSasuke"
-        appRoundedBlock
-        >{{ i }} - {{ alumno | uppercase }}</span
-      >
-      <ng-template #notSasuke>
-        <span>{{ i }} - {{ alumno | uppercase }}</span>
-      </ng-template>
-    </li>
-  </ul>
-
-
-
- -->
+</ol>

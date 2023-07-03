@@ -1,12 +1,27 @@
 * {
-    font-size: large;
+    font-size: small;
+}
+
+.nombre {
+    font-size: larger;
+    text-decoration: underline;
 }
 
 .highlight {
     font-weight: bold;
   }
 
- li {
-    margin-top: 20px;
- }
+
+.alert {
+    color: orange;
+    text-decoration: underline;
+}
+
+.bordered-li {
+    display: flow-root;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 25px;
+    width: fit-content;
+  }
 

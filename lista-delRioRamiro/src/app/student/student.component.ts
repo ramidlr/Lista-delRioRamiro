@@ -4,6 +4,8 @@ interface iStudent {
   nombre: string,
   apellido: string,
   edad: number,
+  cuotapendiente: number,
+  fechanacimiento?: Date;
  }
 
 class Student implements iStudent {
@@ -11,6 +13,8 @@ class Student implements iStudent {
     public nombre: string,
     public apellido: string,
     public edad: number,
+    public cuotapendiente: number,
+    public fechanacimiento?: Date, 
   ) {
     
   }
@@ -24,11 +28,11 @@ class Student implements iStudent {
 export class StudentComponent {
 
   students: Array<Student> = [
-    new Student('Ramiro', 'del Rio', 32), 
-    new Student('Pedro', 'Sanchez', 78), 
-    new Student('Carlos', 'Rivera', 11),
-    new Student('Juan', 'Sierra', 22),
-    new Student('Maximiliano', 'Perez', 33),
+    new Student('Ramiro', 'del Rio', 32, 1022.23, new Date(1991, 4, 29)), 
+    new Student('Pedro', 'Sanchez', 78, 60001.20), 
+    new Student('Carlos', 'Rivera', 11, 123.45),
+    new Student('Juan', 'Sierra', 22, 15000.01),
+    new Student('Maximiliano', 'Perez', 33, 12000.12),
 ];  
 }
 
